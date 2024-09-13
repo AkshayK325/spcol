@@ -48,6 +48,7 @@ Constructs the collocation matrix for a given set of input parameters `u`:
 Below is a simple example of how to use the script:
 
 ```python
+import spcol from spcol
 U = np.array([0, 0, 0, 0, 0.25, 0.5, 0.75, 1, 1, 1, 1])  # Knot vector
 p = 3  # Degree of the B-spline
 u = np.array([0, 0.25, 0.5, 0.75, 1, 1])  # Input points
@@ -72,7 +73,7 @@ This script is provided "as is" without any warranty. Feel free to modify and us
 
 ## Author
 
-- **akumar242**  
+- **akshaykumar@wisc.edu**  
   Created on: October 20, 2021
   
 Feel free to reach out for any questions or clarifications!
