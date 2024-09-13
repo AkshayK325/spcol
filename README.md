@@ -48,13 +48,62 @@ Constructs the collocation matrix for a given set of input parameters `u`:
 Below is a simple example of how to use the script:
 
 ```python
-import spcol from spcol
-U = np.array([0, 0, 0, 0, 0.25, 0.5, 0.75, 1, 1, 1, 1])  # Knot vector
-p = 3  # Degree of the B-spline
-u = np.array([0, 0.25, 0.5, 0.75, 1, 1])  # Input points
+iimport numpy as np
+import matplotlib.pyplot as plt
 
-M = spcol(U, p, u)  # Generate the collocation matrix
-print(M)
+# Assuming the spcol function is imported from your file
+from spcol import spcol
+
+# Knot vector
+U = np.array([0, 0, 0, 0, 0.25, 0.5, 0.75, 1, 1, 1, 1])
+# Degree of the B-spline
+p = 3
+# Input points where we want to evaluate the B-spline curve
+u = np.linspace(0,1,100)
+
+# Control points for the B-spline in 2D (x, y)
+XY = np.array([[0.0, 0.0],   # Control point 1 (x1, y1)
+               [1.0, 1.0],   # Control point 2 (x2, y2)
+               [2.0, 1.0],   # Control point 3 (x3, y3)
+               [3.0, 2.0],   # Control point 4 (x4, y4)
+               [4.0, 1.0],   # Control point 5 (x5, y5)
+               [5.0, 0.0],   # Control point 6 (x6, y6)
+               [1.0, 0.0]])  # Control point 7 (x7, y7)
+
+# Generate the collocation matrix M
+M = spcol(U, p, u)
+
+# Calculate the xy coordinates of the B-spline at points u
+xy = M @ XY  # Matrix multiplication (M * control points)
+
+# Extract the x and y values
+x_vals = xy[:, 0]
+y_vals = xy[:, 1]
+
+
+# Generate the collocation matrix M
+M = spcol(U, p, np.unique(U))
+
+# Calculate the xy coordinates of the B-spline at points u
+xy = M @ XY  # Matrix multiplication (M * control points)
+
+# Extract the x and y values
+x_valsKnots = xy[:, 0]
+y_valsKnots = xy[:, 1]
+
+# Plotting
+plt.figure()
+# Plot the control polygon (control points)
+plt.plot(XY[:, 0], XY[:, 1], 'o--', label='Control Polygon', color='grey')
+# Plot the B-spline curve (evaluated points)
+plt.plot(x_vals, y_vals, 'r-', label='B-spline Curve')
+plt.scatter(x_valsKnots, y_valsKnots,c='b',marker="s", label='Knots')
+plt.title("B-spline Curve")
+plt.xlabel("X")
+plt.ylabel("Y")
+plt.legend()
+plt.grid(True)
+plt.show()
 ```
 
 ## Requirements
