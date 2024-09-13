@@ -1,4 +1,4 @@
-# README for B-Spline Basis and Derivative Computation Script
+# spcol for B-Spline Basis and Derivative Computation
 
 ## Overview
 
