@@ -69,7 +69,8 @@ def findspan(t,x):
 
 def spcol(U,d,u):
    Unq_U = np.unique(U)
-   coll = np.zeros([len(u), len(Unq_U)-1+d])
+   n = len(U) - d - 1
+   coll = np.zeros([len(u),n])
    
    Sort_u = np.sort(u)
    
