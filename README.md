@@ -1,4 +1,4 @@
-# spcol for B-Spline Basis and Derivative Computation
+# spcol (B-spline collocation matrix) for B-Spline Basis and Derivative Computation 
 
 ## Overview
 
