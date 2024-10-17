@@ -46,7 +46,7 @@ Constructs the collocation matrix for a given set of input parameters `u`:
 ## Installation
 
 From GitHub:
-
+```bash
 pip install git+https://github.com/AkshayK325/spcol.git
 
 ## Example Usage
@@ -54,7 +54,7 @@ pip install git+https://github.com/AkshayK325/spcol.git
 Below is a simple example of how to use the script:
 
 ```python
-iimport numpy as np
+import numpy as np
 import matplotlib.pyplot as plt
 
 # Assuming the spcol is installed
@@ -131,4 +131,3 @@ This project is licensed under the GNU General Public License v3.0. See the [LIC
 - **akshaykumar@wisc.edu**  
   Created on: October 20, 2021
   
-Feel free to reach out for any questions or clarifications!
