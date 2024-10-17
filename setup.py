@@ -7,7 +7,7 @@ test_requirements = ['pytest']
 # Define additional requirements
 extras = {'test': test_requirements}
 
-with open('docs/README.md', encoding='utf-8') as f:
+with open('README.md', encoding='utf-8') as f:
     long_description = f.read()
 
 setup(
@@ -20,7 +20,7 @@ setup(
     long_description_content_type="text/markdown",
     author='Akshay Kumar',
     author_email='akshaykumar@wisc.edu',
-    packages=['spcol'],
+    py_modules=['spcol'], 
     install_requires=[
         'numpy',  # Required dependency
     ],
