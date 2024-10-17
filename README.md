@@ -48,7 +48,7 @@ Constructs the collocation matrix for a given set of input parameters `u`:
 From GitHub:
 ```bash
 pip install git+https://github.com/AkshayK325/spcol.git
-
+```
 ## Example Usage
 
 Below is a simple example of how to use the script:
