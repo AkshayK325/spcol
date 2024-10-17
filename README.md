@@ -43,6 +43,12 @@ Constructs the collocation matrix for a given set of input parameters `u`:
 - `d`: Degree of the B-spline.
 - `u`: Array of input points.
 
+## Installation
+
+From GitHub:
+
+pip install git+https://github.com/AkshayK325/spcol.git
+
 ## Example Usage
 
 Below is a simple example of how to use the script:
@@ -51,8 +57,8 @@ Below is a simple example of how to use the script:
 iimport numpy as np
 import matplotlib.pyplot as plt
 
-# Assuming the spcol function is imported from your file
-from spcol import spcol
+# Assuming the spcol is installed
+import spcol as sp
 
 # Knot vector
 U = np.array([0, 0, 0, 0, 0.25, 0.5, 0.75, 1, 1, 1, 1])
@@ -71,7 +77,7 @@ XY = np.array([[0.0, 0.0],   # Control point 1 (x1, y1)
                [1.0, 0.0]])  # Control point 7 (x7, y7)
 
 # Generate the collocation matrix M
-M = spcol(U, p, u)
+M = sp.spcol(U, p, u)
 
 # Calculate the xy coordinates of the B-spline at points u
 xy = M @ XY  # Matrix multiplication (M * control points)
@@ -82,7 +88,7 @@ y_vals = xy[:, 1]
 
 
 # Generate the collocation matrix M
-M = spcol(U, p, np.unique(U))
+M = sp.spcol(U, p, np.unique(U))
 
 # Calculate the xy coordinates of the B-spline at points u
 xy = M @ XY  # Matrix multiplication (M * control points)
