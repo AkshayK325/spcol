@@ -118,7 +118,7 @@ pip install numpy
 ```
 
 ## License
-This script is provided "as is" without any warranty. Feel free to modify and use it for educational or research purposes.
+This project is licensed under the GNU General Public License v3.0. See the [LICENSE](LICENSE) file for details.
 
 ## Author
 
