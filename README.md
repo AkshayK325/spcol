@@ -125,9 +125,4 @@ pip install numpy
 
 ## License
 This project is licensed under the GNU General Public License v3.0. See the [LICENSE](LICENSE) file for details.
-
-## Author
-
-- **akshaykumar@wisc.edu**  
-  Created on: October 20, 2021
   
